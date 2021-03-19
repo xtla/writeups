@@ -47,7 +47,7 @@ int main(int argc, char** argv) {
 }
 ```
 
-### memcpy hooking
+### Hooking memcpy 
 ```c
 void *Hook_memcpy(void *dest, const void *src, size_t n) {
         if(dest >= *(u32 *)&memory + 0x000f3fd8 && dest <= *(u32 *)&memory + 0x000f3fd8 + 40 * 4) {
